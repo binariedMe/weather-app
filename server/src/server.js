@@ -34,6 +34,7 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static('../dist/'));
 app.use('/', routers);
 
 app.use((err, req, res, next) => {

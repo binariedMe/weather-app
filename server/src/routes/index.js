@@ -8,6 +8,6 @@ router.use('/api', Middlewares.loginRequired, api);
 router.post('/signup', Authentication.signup);
 router.post('/signin', Authentication.signin);
 router.get('/ping', (req, res) => res.send('pong'));
-router.get('/', (req, res) => res.json({'source': 'https://github.com/amazingandyyy/mern-stack'}));
+router.get('/', (req, res) => res.sendFile('index.html', { root: '../dist/'}));
 
 export default router;
