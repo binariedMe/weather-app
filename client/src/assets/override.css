@@ -1,0 +1,64 @@
+.form-control {
+    background-color: transparent!important;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #7cb2cb!important;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #7cb2cb!important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #7cb2cb!important;
+}
+input.form-control, select.form-control, textarea.form-control,
+input.form-control:active, select.form-control:active, textarea.form-control:active,
+input.form-control:hover, select.form-control:hover, textarea.form-control:hover,
+input.form-control:focus, select.form-control:focus, textarea.form-control:focus,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input, select, textarea,
+input:active, select:active, textarea:active,
+input:hover, select:hover, textarea:hover,
+input:focus, select:focus, textarea:focus,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px #052438 inset !important;
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+    border-color: #00679f;
+    color: #7cb2cb!important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: #87b1c9 !important;
+}
+
+html, body, #root,
+.root-elm{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+body, body *{
+    color: #87b1c9;
+    box-sizing: border-box;
+}
+.anchor-text{
+    color: #0094b5;
+}
+body {
+    background-color: #0d2436;
+}
+button, input{
+    box-shadow: none!important;
+    background: none;
+}
