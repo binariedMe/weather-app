@@ -1,19 +1,58 @@
+$theme-base: #0d2436;
+$color_1: #87b1c9;
+$color_2: #0094b5;
+$color_3: #267dbd;
+$color_4: #f8f9fa;
+$color_5: #4a5b6926;
+$color_6: #267dbd;
+$color_black: #000000;
+
+/*
+Many other values should be parameterized as well
+like width, height and borders.
+Also we might leverage em/rem values instead of pixel values
+ */
+
+html, body, #root,
+.root-elm{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+body, body *{
+    color: $color_1;
+    box-sizing: border-box;
+}
+.anchor-text{
+    color: $color_2;
+}
+body {
+    background-color: $theme-base;
+}
+button, input{
+    box-shadow: none!important;
+    background: none;
+}
+
 .root-elm form{
     display: flex;
     flex-direction: column;
     margin: auto;
+    width: 300px;
     label{
         font-size: 10px;
         margin: 0;
     }
 }
 .bg-light  {
-    background-color: rgba(248, 249, 250, 0.26)!important;
-    color: #87b1c9!important;
+    background-color: $color_4!important;
+    color: $color_1!important;
     height: 60px;
 }
 .bg-light, .bg-light *  {
-    color: #87b1c9!important;
+    color: $color_1!important;
 }
 .btn{
     cursor: pointer;
@@ -49,10 +88,8 @@
         text-overflow: ellipsis;
     }
     button{
-        border: 1px solid #00679e;
         width: 10px;
         padding: 0;
-        border-width: 0 0 1px 1px;
     }
 }
 
@@ -60,14 +97,15 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    border-right: 5px solid #4a5b6926;
+    border-right: 5px solid $color_5;
     .bane-no-bg, .bane-no-bg>*{
         background: transparent!important;
-        color: #87b1c9;
+        color: $color_1;
         border-left-width: 0!important;
     }
     ul.bane-no-bg>*>*:hover, ul.bane-no-bg>*>*:active{
-        background: rgba(135, 177, 201, 0.33);
+        background: $color_1;
+        color: $color_black;
     }
     ul.bane-no-bg>*>button{
         width: 50px;
@@ -75,20 +113,19 @@
         cursor: pointer;
     }
     .btn{
-        border: 1px solid #00679e;
         border-radius: 0;
         border-width: 0 0 1px 1px;
         font-size: 2rem;
         padding: 0 10px 3px 10px;
     }
     .btn:hover, .btn:active{
-        background: rgba(135, 177, 201, 0.33);
+        background: $color_1;
+        color: $color_black;
     }
     >div{
         margin: 10%;
-        border: 1px solid #00679e;
         align-self: center;
-        min-width: 300px;
+        width: 300px;
         >*{
             display: flex;
             flex-direction: column;
@@ -97,6 +134,7 @@
             flex-direction: row;
         }
         >ul{
+            width: 260px;
             flex-direction: column;
             padding: 0;
             flex: 1;
@@ -104,13 +142,21 @@
             margin: 0;
             .btn{
                 background: transparent;
-                color: #87b1c9;
+                color: $color_1;
                 border-width: 0;
             }
             a{
                 text-decoration: none;
-                color: #87b1c9!important;
+                color: $color_1;
             }
+            li.dropdown-city-list {
+                overflow: hidden;
+                -ms-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+            }
+        }
+        >ul.bane-city-list {
+            width: 300px;
         }
     }
 }
@@ -122,7 +168,7 @@
     text-align: center;
     flex-direction: column;
     font-size: 30px;
-    color: #267dbd!important;
+    color: $color_6!important;
     .small{
         font-size: 14px;
     }

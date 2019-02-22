@@ -36,7 +36,7 @@ ReactDOM.render(
           <Route path="/signin" component= {Signin} />
           <Route path="/signup" component= {Signup} />
           <Route path="/signout" component= {Signout} />
-          <Route path="/weather/:id" component={RequireAuth(Weather)}/>
+          <Route path="/weather/:id?" component={RequireAuth(Weather)}/>
         </Switch>
       </App>
     </HashRouter>

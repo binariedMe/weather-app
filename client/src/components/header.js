@@ -34,7 +34,7 @@ class Header extends Component {
                             <NavLink className="nav-link" to="/account">Account</NavLink>
                         </li>
                       <li className="nav-item">
-                        <NavLink className="nav-link" to="/weather/1273293">Weather</NavLink>
+                        <NavLink className="nav-link" to="/weather">Weather</NavLink>
                       </li>
                     </ul>
                     <ul className="navbar-nav">

@@ -36,7 +36,7 @@ export default class App extends Component {
                 }
               </div>
             </div>
-            <ul className="btn-group-vertical bane-no-bg">
+            <ul className="btn-group-vertical bane-no-bg bane-city-list">
               {
                 this.state.cityList.map((city,ind)=>{
                   return <li className="btn btn-secondary flex-menu" key={ind}>

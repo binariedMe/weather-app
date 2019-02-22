@@ -39,15 +39,16 @@ export default class Select extends Component {
           </div>
           <ul className="btn-group-vertical" >
             {
+
               this.state.cityList.length ? this.state.cityList.map((i, ind)=>(
-                <li key={ind} className="btn btn-secondary" onClick={()=>this.onSelect(i)}>
+                <li key={ind} className="btn btn-secondary dropdown-city-list" onClick={()=>this.onSelect(i)}>
                   {
                     i.name
                   }
                 </li>
-              )) : <li className="btn btn-secondary">
+              )) : (this.state.searchText.length > 2 && !this.state.isFetching && <li className="btn btn-secondary">
                 No data
-              </li>
+              </li>)
             }
             {
               this.state.isFetching ? <li className="btn btn-secondary">

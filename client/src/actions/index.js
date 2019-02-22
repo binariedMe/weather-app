@@ -108,6 +108,13 @@ export function updateUserProfile(profile) {
     }
 }
 
+/**
+ * Actions below are not actually actions.
+ * Due to time constaint, had to opt the faster way to have states
+ * directly manipulated by components.
+ * We can instead connect components to stores and use more intuitive way as done for profile.
+ */
+
 export function searchCity(query, dwery) {
 
   return axios.get(`/api/city/search?queryString=${query}`)

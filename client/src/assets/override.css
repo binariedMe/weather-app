@@ -39,26 +39,3 @@ input:-webkit-autofill:active  {
 input:-webkit-autofill {
     -webkit-text-fill-color: #87b1c9 !important;
 }
-
-html, body, #root,
-.root-elm{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-}
-
-body, body *{
-    color: #87b1c9;
-    box-sizing: border-box;
-}
-.anchor-text{
-    color: #0094b5;
-}
-body {
-    background-color: #0d2436;
-}
-button, input{
-    box-shadow: none!important;
-    background: none;
-}

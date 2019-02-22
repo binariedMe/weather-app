@@ -12,6 +12,11 @@ export default class Weather extends Component {
 
   componentDidMount() {
 
+    // Default city is the capital of my country
+    // We can instead have user's profile updated with country and hence the capital
+    // so that we don't have this hard coded value.
+
+    this.props.match.params.id = this.props.match.params.id || 1273293;
     getWeatherById(this.props.match.params.id)
       .then(weather => {
         this.setState({
