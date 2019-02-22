@@ -1,10 +1,3 @@
-# mern-stack
-MongoDB, Expressjs, React/Redux, Nodejs
-
-## Prerequirements
-- [MongoDB](https://gist.github.com/nrollr/9f523ae17ecdbb50311980503409aeb3)
-- [Node](https://nodejs.org/en/download/) ^8.0.0
-- [npm](https://nodejs.org/en/download/package-manager/)
 
 ## Client-side usage(PORT: 3000)
 ```terminal
@@ -36,9 +29,9 @@ redux-thunk: ^2.1.0 |
 
 # Pending tasks
 
-- Use postgres instead of mongo.
-- Optimize sass files further.
+- Use postgres instead of mongo
 - Some actions are not using redux store and action which should be taken care of.
+- Optimize sass files further and fix bugs related to responsiveness of pages.
 - Use auto-restart tool like pm2/forever to hot-start app.
 - Bifurcate the app in three service : client, server, database.
 - Containerize the app using docker.

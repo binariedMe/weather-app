@@ -1,5 +1,3 @@
-# server-side
-MongoDB, Express, Node
 
 ### Server-side usage(PORT: 8000)
 ```terminal
