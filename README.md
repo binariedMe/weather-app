@@ -20,15 +20,6 @@ $ npm i
 $ npm run dev
 ```
 
-## Deploy Server to [Heroku](https://dashboard.heroku.com/)
-```terminal
-$ npm i -g heroku
-$ heroku login
-$ heroku create
-$ npm run heroku:add <your-heroku-app-name>
-$ npm run deploy:heroku
-```
-
 # Dependencies(tech-stacks)
 Client-side | Server-side
 --- | ---

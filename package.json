@@ -8,8 +8,6 @@
     "precommit": "npm test",
     "prepush": "npm test",
     "start": "cd server && cross-env NODE_ENV=production node dist/server.js",
-    "heroku:add": "heroku git:remote -a",
-    "deploy:heroku": "git subtree push --prefix server heroku master"
   },
   "repository": {
     "type": "git",
