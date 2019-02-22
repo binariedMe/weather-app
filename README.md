@@ -32,14 +32,13 @@ redux-thunk: ^2.1.0 |
 - Use postgres instead of mongo
 - Some actions are not using redux store and action which should be taken care of.
 - Optimize sass files further and fix bugs related to responsiveness of pages.
-- Use auto-restart tool like pm2/forever to hot-start app.
 - Bifurcate the app in three service : client, server, database.
 - Containerize the app using docker.
 - Tests are incompleted and haven't been verified.
  So missing tests should be written and verified.
 - Add location information at the time of sign-in and use that to show default
 city for weather.
-- Show correct weather instead of one static icon for all weather type
+- Show correct weather status icon instead of one static icon for all weather type
 - Remove .env file and configure prod script to accordingly take care of that.
 - Passport.js for auth can be preferred.
 - Use HTTP 2 for better performance.
