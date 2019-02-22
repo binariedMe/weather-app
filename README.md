@@ -39,6 +39,9 @@ redux-thunk: ^2.1.0 |
 - Use postgres instead of mongo.
 - Optimize sass files further.
 - Some actions are not using redux which should be taken care of.
+- Use auto-restart tool like pm2/forever to hot-start app.
+- Bifurcate the app in three service : client, server, database.
+- Containerize the app using docker.
 - Tests are incompleted and haven't been verified.
  So missing tests should be written and verified.
 - Add location information at the time of sign-in and use that to show default
