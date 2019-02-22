@@ -33,3 +33,20 @@ react-router-dom: ^4.2.2 | mongoose: ^4.7.4
 redux: ^3.7.2 | morgan: ^1.7.0
 redux-form: ^6.4.1 |
 redux-thunk: ^2.1.0 |
+
+# Pending tasks
+
+- Use postgres instead of mongo.
+- Optimize sass files further.
+- Some actions are not using redux which should be taken care of.
+- Tests are incompleted and haven't been verified.
+ So missing tests should be written and verified.
+- Add location information at the time of sign-in and use that to show default
+city for weather.
+- Show correct weather instead of one static icon for all weather type
+- Remove .env file and configure prod script to accordingly take care of that.
+- Passport.js for auth can be preferred.
+- Use HTTP 2 for better performance.
+- Other performance/logical/ui improvements
+- Bug fixes.
+
