@@ -31,8 +31,6 @@ redux-thunk: ^2.1.0 |
 
 - Use postgres instead of mongo
 - Some actions are not using redux store and action which should be taken care of.
-- Optimize sass files further and fix bugs related to responsiveness of pages.
-- Bifurcate the app in three service : client, server, database.
 - Containerize the app using docker.
 - Tests are incompleted and haven't been verified.
  So missing tests should be written and verified.
