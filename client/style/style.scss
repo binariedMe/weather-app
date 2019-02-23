@@ -6,6 +6,7 @@ $color_4: #f8f9fa;
 $color_5: #4a5b6926;
 $color_6: #267dbd;
 $color_black: #000000;
+$light-theme: #0067a33b;
 
 /*
 Many other values should be parameterized as well
@@ -98,6 +99,7 @@ button, input{
     flex-direction: column;
     flex: 1;
     border-right: 5px solid $color_5;
+    position: relative;
     .bane-no-bg, .bane-no-bg>*{
         background: transparent!important;
         color: $color_1;
@@ -159,6 +161,21 @@ button, input{
             width: 300px;
         }
     }
+    > button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        border-width: 0 0 1px 0;
+        border-radius: 0;
+        outline: none;
+        border-color: $light-theme;
+        display: none;
+        > span {
+            cursor: pointer;
+            color: $color_1;
+        }
+    }
 }
 
 .bane-weather-p{
@@ -192,6 +209,8 @@ button, input{
             align-items: center;
             flex-direction: column;
             justify-content: center;
+            max-height: 150px;
+            margin: auto;
         }
         >div:last-of-type{
             >*{
@@ -207,11 +226,63 @@ button, input{
     }
 }
 
-
-@media (max-width: 543px) {
+.bane-top-header{
+    height: 60px;
+    background: $color_1;
+    display: flex;
+}
+.bane-top-header>*{
+    flex: 1;
+    display: flex;
+    height: 100%;
+}
+.bane-top-header>*:last-of-type {
+    flex-direction: row-reverse;
+}
+.bane-top-header>*>*{
+    height: 100%;
+    min-width: 60px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    text-decoration: none!important;
+}
+.bane-top-header>*>*:hover{
+    color: $color_1;
+    background: $theme-base;
+}
+.bane-top-header *{
+    color: $theme-base;
 
 }
 
-@media (min-width: 767px) { 
-    
+@media (max-width: 768px) {
+    .bane-select{
+        > button {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .bane-weather-p {
+        .bane-weather {
+            flex-direction: column;
+        }
+    }
+    .bane-more-text{
+        font-size: 20px!important;
+    }
+    .bane-weather-p{
+        .bane-weather {
+            > div {
+                margin: 50px auto;
+            }
+            .bane-weather-name{
+                overflow: visible;
+            }
+        }
+    }
  }

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import { NavLink } from 'react-router-dom';
@@ -7,41 +7,29 @@ class Header extends Component {
     renderSignButton(){
         if (this.props.authenticated){
             return (
-                <li className="nav-item">
-                    <NavLink className="nav-link" to="/signout">Sign out</NavLink>
-                </li>
+              <NavLink to="/signout">Sign out</NavLink>
             )
         }else{
             return (
-                [
-                    <li className="nav-item" key="1">
-                        <NavLink to="/signin" className="nav-link">Sign in</NavLink>
-                    </li>,
-                    <li className="nav-item" key="2">
-                        <NavLink to="/signup" className="nav-link">Sign Up</NavLink>
-                    </li>
-                ]
+                <Fragment>
+                  <NavLink to="/signin">Sign in</NavLink>
+                  <NavLink to="/signup">Sign Up</NavLink>
+                </Fragment>
             )
         }
     }
     render() {
         return (
-            <nav className="navbar navbar-expand-sm navbar-light bg-light">
-                <NavLink className="navbar-brand" to="/">MERN</NavLink>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/account">Account</NavLink>
-                        </li>
-                      <li className="nav-item">
-                        <NavLink className="nav-link" to="/weather">Weather</NavLink>
-                      </li>
-                    </ul>
-                    <ul className="navbar-nav">
-                        {this.renderSignButton()}
-                    </ul>
-                </div>
-            </nav>
+            <header className="bane-top-header">
+              <div>
+                <NavLink to="/">MERN</NavLink>
+                <NavLink to="/account">Account</NavLink>
+                <NavLink to="/weather">Weather</NavLink>
+              </div>
+              <div>
+                {this.renderSignButton()}
+              </div>
+            </header>
         )
     }
 }

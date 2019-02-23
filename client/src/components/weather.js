@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import cns from 'classnames'
 import {getWeatherById} from '../actions/index';
 
 export default class Weather extends Component {
@@ -48,7 +49,7 @@ export default class Weather extends Component {
             <div>
               <div>{date.getDate() > 9 ? date.getDate() : '0' + date.getDate()}</div>
               <div>{date.getMonth() > 8 ? date.getMonth() + 1 : '0' + (date.getMonth() + 1)}</div>
-              <div>{this.state.weather.name}</div>
+              <div className={`bane-weather-name ${this.state.weather.name && this.state.weather.name.length > 20 ? 'bane-more-text' : ''}`}>{this.state.weather.name}</div>
             </div>
             <div>
               <div>

@@ -60,6 +60,9 @@ export default class Select extends Component {
 
           </ul>
         </div>
+        {
+          this.props.children
+        }
       </div>
     );
   }
